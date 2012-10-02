@@ -1,0 +1,56 @@
+*foldcol.txt*	FoldCol	: Column Folding			Jul 23, 2010
+
+Author:    Charles E. Campbell, Jr.  <drNchipO@ScampbellPfamilyA.bizM>
+	   (remove NOSPAM from Campbell's email to use)
+Copyright: (c) 2004-2010 by Charles E. Campbell, Jr.	*foldcol-copyright*
+           The VIM LICENSE applies to AsNeeded.vim and AsNeeded.txt
+           (see |copyright|) except use "AsNeeded" instead of "Vim"
+	   No warranty, express or implied.  Use At-Your-Own-Risk.
+
+
+==============================================================================
+1. Contents						*foldcol-contents*
+
+	1. Contents................................: |foldcol-contents|
+	2. FoldCol Manual..........................: |foldcol|
+	3. FoldCol History.........................: |foldcol-history|
+
+
+==============================================================================
+2. FoldCol Manual					*foldcol*
+
+INSTALLATION:
+
+MAPS:
+	<ctrl-v> [move] \vfc :	Select column to be folded using visual block
+				mode.  The \vfc (actually <Leader>vfc) will
+				then column-fold the designated text.
+
+	\vfc                 :	In normal mode, the \vfc (again, actually
+				<Leader>vfc) will remove the column folding.
+
+COMMANDS:
+
+	<ctrl-v> [move] :FC  :	Just like the \vfc map for visual mode
+
+	:FC!                 :	Will remove all column folding.
+
+
+==============================================================================
+3. FoldCol History					*foldcol-history*
+	v3	Apr 09, 2010 * :FoldCol and :FC commands added
+			       help page written and included
+			     * Maps changed from <Leader>fc to <Leader>vfc
+			       to reduce clashes with other plugins
+			     * Added "containedin=ALL" to allow it to do
+			       folding while inside other syntax regions.
+			     * Note that it will still not fold keywords.
+		Jul 23, 2010 * changed conc to |'cole'| to correspond to
+			       vim 7.3
+	v2	Dec 21, 2004 * initial release
+	v1	Epoch        * never released
+
+
+==============================================================================
+vim:tw=78:ts=8:ft=help:fdm=marker:
+
