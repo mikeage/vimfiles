@@ -1,3 +1,81 @@
 [submodule "bundle/vim-pathogen"]
 	path = bundle/vim-pathogen
 	url = https://github.com/tpope/vim-pathogen.git
+[submodule "bundle/ccase.vim"]
+	path = bundle/ccase.vim
+	url = https://github.com/mikeage/ccase.vim.git
+[submodule "bundle/bufexplorer"]
+	path = bundle/bufexplorer
+	url = https://github.com/c9s/bufexplorer.git
+[submodule "bundle/supertab"]
+	path = bundle/supertab
+	url = https://github.com/ervandew/supertab.git
+[submodule "bundle/vim-snipmate"]
+	path = bundle/vim-snipmate
+	url = https://github.com/garbas/vim-snipmate.git
+[submodule "bundle/snipmate-snippets"]
+	path = bundle/snipmate-snippets
+	url = https://github.com/honza/snipmate-snippets.git
+[submodule "bundle/ctrlp.vim"]
+	path = bundle/ctrlp.vim
+	url = https://github.com/kien/ctrlp.vim.git
+[submodule "bundle/rainbow_parentheses.vim"]
+	path = bundle/rainbow_parentheses.vim
+	url = https://github.com/kien/rainbow_parentheses.vim.git
+[submodule "bundle/vim-easymotion"]
+	path = bundle/vim-easymotion
+	url = https://github.com/Lokaltog/vim-easymotion.git
+[submodule "bundle/vim-addon-mw-utils"]
+	path = bundle/vim-addon-mw-utils
+	url = https://github.com/MarcWeber/vim-addon-mw-utils.git
+[submodule "bundle/ack.vim"]
+	path = bundle/ack.vim
+	url = https://github.com/mileszs/ack.vim.git
+[submodule "bundle/nerdcommenter"]
+	path = bundle/nerdcommenter
+	url = https://github.com/scrooloose/nerdcommenter.git
+[submodule "bundle/nerdtree"]
+	path = bundle/nerdtree
+	url = https://github.com/scrooloose/nerdtree.git
+[submodule "bundle/syntastic"]
+	path = bundle/syntastic
+	url = https://github.com/scrooloose/syntastic.git
+[submodule "bundle/gundo.vim"]
+	path = bundle/gundo.vim
+	url = https://github.com/sjl/gundo.vim.git
+[submodule "bundle/tlib_vim"]
+	path = bundle/tlib_vim
+	url = https://github.com/tomtom/tlib_vim.git
+[submodule "bundle/vim-eunuch"]
+	path = bundle/vim-eunuch
+	url = https://github.com/tpope/vim-eunuch.git
+[submodule "bundle/vim-matrix-screensaver"]
+	path = bundle/vim-matrix-screensaver
+	url = https://github.com/uguu-org/vim-matrix-screensaver.git
+[submodule "bundle/autohotkey-ahk"]
+	path = bundle/autohotkey-ahk
+	url = https://github.com/vim-scripts/autohotkey-ahk.git
+[submodule "bundle/CRefVim"]
+	path = bundle/CRefVim
+	url = https://github.com/vim-scripts/CRefVim.git
+[submodule "bundle/cscope_macros.vim"]
+	path = bundle/cscope_macros.vim
+	url = https://github.com/vim-scripts/cscope_macros.vim.git
+[submodule "bundle/DirDiff.vim"]
+	path = bundle/DirDiff.vim
+	url = https://github.com/vim-scripts/DirDiff.vim.git
+[submodule "bundle/DoxygenToolkit.vim"]
+	path = bundle/DoxygenToolkit.vim
+	url = https://github.com/vim-scripts/DoxygenToolkit.vim.git
+[submodule "bundle/foldutil.vim"]
+	path = bundle/foldutil.vim
+	url = https://github.com/vim-scripts/foldutil.vim.git
+[submodule "bundle/genutils"]
+	path = bundle/genutils
+	url = https://github.com/vim-scripts/genutils.git
+[submodule "bundle/YankRing.vim"]
+	path = bundle/YankRing.vim
+	url = https://github.com/vim-scripts/YankRing.vim.git
+[submodule "bundle/ShowMarks"]
+	path = bundle/ShowMarks
+	url = https://github.com/VimEz/ShowMarks.git
