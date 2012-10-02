@@ -1,0 +1,4 @@
+vimfiles
+========
+
+My .vim directory.
