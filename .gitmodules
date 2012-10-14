@@ -78,7 +78,7 @@
 	url = https://github.com/vim-scripts/YankRing.vim.git
 [submodule "bundle/ShowMarks"]
 	path = bundle/ShowMarks
-	url = https://github.com/VimEz/ShowMarks.git
+	url = https://github.com/mikeage/ShowMarks.git
 [submodule "bundle/A_mikeage"]
 	path = bundle/A_mikeage
 	url = https://github.com/mikeage/vim-mikeage.git
