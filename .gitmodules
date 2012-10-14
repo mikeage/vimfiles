@@ -82,3 +82,6 @@
 [submodule "bundle/A_mikeage"]
 	path = bundle/A_mikeage
 	url = https://github.com/mikeage/vim-mikeage.git
+[submodule "bundle/vim-fugitive"]
+	path = bundle/vim-fugitive
+	url = https://github.com/tpope/vim-fugitive.git
