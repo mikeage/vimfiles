@@ -1,0 +1,1 @@
+This directory is empty, but without it, vim complains if the user does not have permissions to write this directory (though it doesn't seem like anything is ever written here).
