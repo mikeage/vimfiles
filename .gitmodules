@@ -88,3 +88,6 @@
 [submodule "bundle/vim-actionscript"]
 	path = bundle/vim-actionscript
 	url = https://github.com/jeroenbourgois/vim-actionscript.git
+[submodule "bundle/mediawiki.vim"]
+	path = bundle/mediawiki.vim
+	url = git@github.com:vim-scripts/mediawiki.vim.git
