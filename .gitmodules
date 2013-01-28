@@ -91,3 +91,6 @@
 [submodule "bundle/mediawiki"]
 	path = bundle/mediawiki
 	url = git@github.com:mikeage/mediawiki.vim.git
+[submodule "bundle/vdebug"]
+	path = bundle/vdebug
+	url = git@github.com:joonty/vdebug.git
