@@ -94,3 +94,6 @@
 [submodule "bundle/ultisnips"]
 	path = bundle/ultisnips
 	url = git@github.com:SirVer/ultisnips.git
+[submodule "bundle/occur"]
+	path = bundle/occur
+	url = git@github.com:mikeage/occur.vim.git
