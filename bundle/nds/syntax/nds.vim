@@ -73,12 +73,12 @@ syntax match ndsLevel /![a-zA-Z0-9]\+/ nextgroup=ndsComp skipwhite
 " All of the location fields. Starting with a <, they are of the format X:xxxxxx.
 syntax match ndsLocation /[^^]<.\{-}>/ms=s+1,me=e-1 contains=ndsLocationFile,ndsLocationThread1,ndsLocationThread2,ndsLocationFunction,ndsLocationLine,ndsLocationProcess nextgroup=ndsText conceal 
 " For Core, F: refers to the function; Core uses M: for the file. It shouldn't matter very much, since all get the same highlighting by default
-syntax match ndsLocationFile /[FM]: \?[a-zA-Z_0-9.]\+/ skipwhite contained
+syntax match ndsLocationFile /[FM]: \?[a-zA-Z_0-9.()]\+/ skipwhite contained
 syntax match ndsLocationLine /L:[0-9]\+/ skipwhite contained
-syntax match ndsLocationFunction /P: \?[a-zA-Z_0-9. <>]\+/ skipwhite contained contains=ndsLocationFile,ndsLocationLine,ndsLocationFunction,ndsLocationThread1,ndsLocationThread2,ndsLocationProcess
-syntax match ndsLocationThread1 /t: \?[a-zA-Z_0-9. ]\+/ skipwhite contained contains=ndsLocationFile,ndsLocationLine,ndsLocationFunction,ndsLocationThread1,ndsLocationThread2,ndsLocationProcess
-syntax match ndsLocationThread2 /T: \?[a-zA-Z_0-9. ]\+/ skipwhite contained contains=ndsLocationFile,ndsLocationLine,ndsLocationFunction,ndsLocationThread1,ndsLocationThread2,ndsLocationProcess
-syntax match ndsLocationProcess /p: \?[0-9a-fA-F ]\+/ skipwhite contained contains=ndsLocationFile,ndsLocationLine,ndsLocationFunction,ndsLocationThread1,ndsLocationThread2,ndsLocationProcess
+syntax match ndsLocationFunction /P: \?[a-zA-Z_0-9. <>()]\+/ skipwhite contained contains=ndsLocationFile,ndsLocationLine,ndsLocationFunction,ndsLocationThread1,ndsLocationThread2,ndsLocationProcess
+syntax match ndsLocationThread1 /t: \?\(0x\)\?[a-zA-Z_0-9. ]\+/ skipwhite contained contains=ndsLocationFile,ndsLocationLine,ndsLocationFunction,ndsLocationThread1,ndsLocationThread2,ndsLocationProcess
+syntax match ndsLocationThread2 /T: \?\(0x\)\?[a-zA-Z_0-9. ]\+/ skipwhite contained contains=ndsLocationFile,ndsLocationLine,ndsLocationFunction,ndsLocationThread1,ndsLocationThread2,ndsLocationProcess
+syntax match ndsLocationProcess /p: \?\(0x\)\?[0-9a-fA-F ]\+/ skipwhite contained contains=ndsLocationFile,ndsLocationLine,ndsLocationFunction,ndsLocationThread1,ndsLocationThread2,ndsLocationProcess
 
 
 "*****************************************************************************
