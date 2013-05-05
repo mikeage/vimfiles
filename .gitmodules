@@ -94,3 +94,6 @@
 [submodule "bundle/occur"]
 	path = bundle/occur
 	url = git@github.com:mikeage/occur.vim.git
+[submodule "bundle/yankmarks"]
+	path = bundle/yankmarks
+	url = git@github.com:mikeage/vim-yankmarks.git
