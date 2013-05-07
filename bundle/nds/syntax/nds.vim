@@ -56,29 +56,35 @@ set conceallevel=3
 syntax match ndsText /.*$/ skipwhite contains=ndsLostMessages,ndsEnter,ndsExit
 
 " The EZLog header may or may not be present.
-syntax match ndsEZLogHeader /^<\d\d\/\d\d\/\d\d\d\d \d\d:\d\d:\d\d:\d\d\d> / nextgroup=ndsNDS,ndsSeq conceal
+syntax match ndsEZLogHeader /^<\d\d\/\d\d\/\d\d\d\d \d\d:\d\d:\d\d:\d\d\d> / nextgroup=ndsNDS,ndsSeq "conceal
 " This header was seen on logs from China. Not sure what tool it was from.
-syntax match ndsChinaLogHeader /^\[\a\{3} \a\{3} \d\{2} \d\{2}:\d\{2}:\d\{2}\.\d\{3} \d\{4}\] / nextgroup=ndsNDS,ndsSeq conceal 
-syntax match ndsChinaLogHeader2 /^<\d\{2}-\d\{2}-\d\{4} \d\{2}:\d\{2}:\d\{2}\:\d\{3}> / nextgroup=ndsNDS,ndsSeq conceal 
+syntax match ndsChinaLogHeader /^\[\a\{3} \a\{3} \d\{2} \d\{2}:\d\{2}:\d\{2}\.\d\{3} \d\{4}\] / nextgroup=ndsNDS,ndsSeq "conceal 
+syntax match ndsChinaLogHeader2 /^<\d\{2}-\d\{2}-\d\{4} \d\{2}:\d\{2}:\d\{2}\:\d\{3}> / nextgroup=ndsNDS,ndsSeq "conceal 
 " Core and DIAG logs contain NDS: at the beginning, as per LQQ-350
-syntax match ndsNDS /NDS: \?/ nextgroup=ndsTimestamp skipwhite conceal
+syntax match ndsNDS /NDS: \?/ nextgroup=ndsTimestamp skipwhite "conceal
 " XDebug uses a sequence counter; more useful, but not technically correct
 syntax match ndsSeq /[0-9]\+ /he=e-1 nextgroup=ndsTimestamp skipwhite
 " Timestamp; milliseconds (inc. fractional ms in DIAG) from boot
-syntax match ndsTimestamp /\^[0-9.]\+ \?/ nextgroup=ndsFatal,ndsError,ndsWarning,ndsCaution,ndsMilestone,ndsLevel  skipwhite conceal
+syntax match ndsTimestamp /\^[0-9.]\+ \?/ nextgroup=ndsTimediff,ndsFatal,ndsError,ndsWarning,ndsCaution,ndsMilestone,ndsLevel  skipwhite "conceal
+syntax match ndsTimediff /[0-9.]\+ [0-9.]\+ / nextgroup=ndsTimediff,ndsFatal,ndsError,ndsWarning,ndsCaution,ndsMilestone,ndsLevel contains=ndsTimediffLong,ndsTimediffMedium skipwhite "conceal
+syntax match ndsTimediffLong /[1-9]\+[0-9]*\.[0-9]\+ [0-9.]\+ / contained
+syntax match ndsTimediffMedium /0\.[1-9][0-9]\+ [0-9.]\+ / contained
+
 " Component
 syntax match ndsComp /-[a-zA-Z_0-9]\+/ nextgroup=ndsLocation skipwhite
 " Level. Can be a string (XDebug, DIAG) or a number (Core)
 syntax match ndsLevel /![a-zA-Z0-9]\+/ nextgroup=ndsComp skipwhite
 " All of the location fields. Starting with a <, they are of the format X:xxxxxx.
-syntax match ndsLocation /[^^]<.\{-}>/ms=s+1,me=e-1 contains=ndsLocationFile,ndsLocationThread1,ndsLocationThread2,ndsLocationFunction,ndsLocationLine,ndsLocationProcess nextgroup=ndsText conceal 
+syntax match ndsLocation /[^^]<.\{-}>/ms=s+1,me=e-1 contains=ndsLocationFile,ndsLocationThread1,ndsLocationThread2,ndsLocationFunction,ndsLocationLine,ndsLocationProcess,ndsLocationInstanceGW,ndsLocationInstanceCL nextgroup=ndsText "conceal 
 " For Core, F: refers to the function; Core uses M: for the file. It shouldn't matter very much, since all get the same highlighting by default
-syntax match ndsLocationFile /[FM]: \?[a-zA-Z_0-9.()]\+/ skipwhite contained
+syntax match ndsLocationFile /[FM]: \?[a-zA-Z_0-9.() ]\+/ skipwhite contained contains=ndsLocationFile,ndsLocationLine,ndsLocationFunction,ndsLocationThread1,ndsLocationThread2,ndsLocationProcess
 syntax match ndsLocationLine /L:[0-9]\+/ skipwhite contained
 syntax match ndsLocationFunction /P: \?[a-zA-Z_0-9. <>()]\+/ skipwhite contained contains=ndsLocationFile,ndsLocationLine,ndsLocationFunction,ndsLocationThread1,ndsLocationThread2,ndsLocationProcess
 syntax match ndsLocationThread1 /t: \?\(0x\)\?[a-zA-Z_0-9. ]\+/ skipwhite contained contains=ndsLocationFile,ndsLocationLine,ndsLocationFunction,ndsLocationThread1,ndsLocationThread2,ndsLocationProcess
 syntax match ndsLocationThread2 /T: \?\(0x\)\?[a-zA-Z_0-9. ]\+/ skipwhite contained contains=ndsLocationFile,ndsLocationLine,ndsLocationFunction,ndsLocationThread1,ndsLocationThread2,ndsLocationProcess
 syntax match ndsLocationProcess /p: \?\(0x\)\?[0-9a-fA-F ]\+/ skipwhite contained contains=ndsLocationFile,ndsLocationLine,ndsLocationFunction,ndsLocationThread1,ndsLocationThread2,ndsLocationProcess
+syntax match ndsLocationInstanceGW /I:GW /me=e-1 skipwhite contained contains=ndsLocationFile,ndsLocationLine,ndsLocationFunction,ndsLocationThread1,ndsLocationThread2,ndsLocationProcess
+syntax match ndsLocationInstanceCL /I:CL /me=e-1 skipwhite contained contains=ndsLocationFile,ndsLocationLine,ndsLocationFunction,ndsLocationThread1,ndsLocationThread2,ndsLocationProcess
 
 
 "*****************************************************************************
@@ -127,8 +133,12 @@ syntax match ndsMilestone /!MIL */ nextgroup=ndsComp
 "*****************************************************************************
 
 highlight ndsLostMessages gui=bold guibg=Red guifg=White cterm=bold ctermbg=Red ctermfg=White
+highlight ndsTimediffLong gui=bold guibg=Red guifg=White cterm=bold ctermbg=Red ctermfg=White
+highlight ndsTimediffMedium gui=bold guibg=LightRed guifg=Black cterm=bold ctermbg=LightRed ctermfg=Black
 highlight ndsEnter guibg=DarkGreen guifg=White ctermbg=DarkGreen ctermfg=White
 highlight ndsExit guibg=DarkGreen guifg=White ctermbg=DarkGreen ctermfg=White
+highlight ndsLocationInstanceGW guibg=DarkGreen guifg=White ctermbg=DarkGreen ctermfg=White
+highlight ndsLocationInstanceCL guibg=DarkBlue guifg=White ctermbg=DarkBlue ctermfg=White
 
 highlight ndsEZLogHeader guifg=Gray ctermfg=Gray 
 highlight ndsChinaLogHeader guifg=Gray ctermfg=Gray 
@@ -136,6 +146,7 @@ highlight ndsChinaLogHeader2 guifg=Gray ctermfg=Gray
 highlight link ndsNDS Type
 highlight link ndsSeq Type
 highlight link ndsTimestamp Type
+highlight link ndsTimediff Type
 highlight ndsComp guifg=Red gui=italic
 highlight ndsLevel guifg=Purple ctermfg=DarkMagenta
 
@@ -158,9 +169,9 @@ highlight ndsMilestone guibg=Gray ctermbg=Gray
 "set linebreak
 
 map <silent> <leader>ch :call ToggleGroupConceal('ndsEZLogHeader') <CR>:call ToggleGroupConceal('ndsChinaLogHeader')<CR>:call ToggleGroupConceal('ndsChinaLogHeader2')<CR>
-map <silent> <leader>chh :call ToggleGroupConceal('ndsNDS') <CR>:call ToggleGroupConceal('ndsTimestamp')<CR>
+map <silent> <leader>chh :call ToggleGroupConceal('ndsNDS') <CR>:call ToggleGroupConceal('ndsTimestamp')<CR>:call ToggleGroupConceal('ndsTimediff')<CR>
 map <silent> <leader>cd :call ToggleGroupConceal('ndsLocation') <CR>
-
+"map <silent> <leader>cg :call ToggleGroupConceal(synIDattr(synID(line("."),col("."),1),"name"))<CR>
 " Thanks to 'Al' at stackoverflow for this function:
 " http://stackoverflow.com/questions/3853631/toggling-the-concealed-attribute-for-a-syntax-highlight-in-vim
 function! ToggleGroupConceal(group)
