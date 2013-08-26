@@ -3,7 +3,7 @@
 	url = https://github.com/tpope/vim-pathogen.git
 [submodule "bundle/ccase.vim"]
 	path = bundle/ccase.vim
-	url = https://github.com/mikeage/ccase.vim.git
+	url = git@github.com:mikeage/ccase.vim.git
 [submodule "bundle/bufexplorer"]
 	path = bundle/bufexplorer
 	url = https://github.com/c9s/bufexplorer.git
@@ -72,10 +72,10 @@
 	url = https://github.com/vim-scripts/YankRing.vim.git
 [submodule "bundle/ShowMarks"]
 	path = bundle/ShowMarks
-	url = https://github.com/mikeage/ShowMarks.git
+	url = git@github.com:mikeage/ShowMarks.git
 [submodule "bundle/A_mikeage"]
 	path = bundle/A_mikeage
-	url = https://github.com/mikeage/vim-mikeage.git
+	url = git@github.com:mikeage/vim-mikeage.git
 [submodule "bundle/vim-fugitive"]
 	path = bundle/vim-fugitive
 	url = https://github.com/tpope/vim-fugitive.git
