@@ -103,3 +103,6 @@
 [submodule "bundle/minibufexpl.vim"]
 	path = bundle/minibufexpl.vim
 	url = git@github.com:fholgado/minibufexpl.vim.git
+[submodule "bundle/LogViewer"]
+	path = bundle/LogViewer
+	url = git@github.com:mikeage/LogViewer.git
