@@ -77,14 +77,14 @@ syntax match ndsLevel /![a-zA-Z0-9]\+/ nextgroup=ndsComp skipwhite
 " All of the location fields. Starting with a <, they are of the format X:xxxxxx.
 syntax match ndsLocation /[^^]<.\{-}>/ms=s+1,me=e-1 contains=ndsLocationFile,ndsLocationThread1,ndsLocationThread2,ndsLocationFunction,ndsLocationLine,ndsLocationProcess,ndsLocationInstanceGW,ndsLocationInstanceCL nextgroup=ndsText "conceal 
 " For Core, F: refers to the function; Core uses M: for the file. It shouldn't matter very much, since all get the same highlighting by default
-syntax match ndsLocationFile /[FM]: \?[a-zA-Z_0-9.() ]\+/ skipwhite contained contains=ndsLocationFile,ndsLocationLine,ndsLocationFunction,ndsLocationThread1,ndsLocationThread2,ndsLocationProcess
+syntax match ndsLocationFile /[FM]: \?[a-zA-Z_0-9.() ]\+/ skipwhite contained contains=ndsLocationFile,ndsLocationLine,ndsLocationFunction,ndsLocationThread1,ndsLocationThread2,ndsLocationProcess,ndsLocationInstanceGW,ndsLocationInstanceCL
 syntax match ndsLocationLine /L:[0-9]\+/ skipwhite contained
-syntax match ndsLocationFunction /P: \?[a-zA-Z_0-9. <>()]\+/ skipwhite contained contains=ndsLocationFile,ndsLocationLine,ndsLocationFunction,ndsLocationThread1,ndsLocationThread2,ndsLocationProcess
-syntax match ndsLocationThread1 /t: \?\(0x\)\?[a-zA-Z_0-9. ]\+/ skipwhite contained contains=ndsLocationFile,ndsLocationLine,ndsLocationFunction,ndsLocationThread1,ndsLocationThread2,ndsLocationProcess
-syntax match ndsLocationThread2 /T: \?\(0x\)\?[a-zA-Z_0-9. ]\+/ skipwhite contained contains=ndsLocationFile,ndsLocationLine,ndsLocationFunction,ndsLocationThread1,ndsLocationThread2,ndsLocationProcess
-syntax match ndsLocationProcess /p: \?\(0x\)\?[0-9a-fA-F ]\+/ skipwhite contained contains=ndsLocationFile,ndsLocationLine,ndsLocationFunction,ndsLocationThread1,ndsLocationThread2,ndsLocationProcess
-syntax match ndsLocationInstanceGW /I:GW /me=e-1 skipwhite contained contains=ndsLocationFile,ndsLocationLine,ndsLocationFunction,ndsLocationThread1,ndsLocationThread2,ndsLocationProcess
-syntax match ndsLocationInstanceCL /I:CL /me=e-1 skipwhite contained contains=ndsLocationFile,ndsLocationLine,ndsLocationFunction,ndsLocationThread1,ndsLocationThread2,ndsLocationProcess
+syntax match ndsLocationFunction /P: \?[a-zA-Z_0-9. <>()]\+/ skipwhite contained contains=ndsLocationFile,ndsLocationLine,ndsLocationFunction,ndsLocationThread1,ndsLocationThread2,ndsLocationProcess,ndsLocationInstanceGW,ndsLocationInstanceCL
+syntax match ndsLocationThread1 /t: \?\(0x\)\?[a-zA-Z_0-9. ]\+/ skipwhite contained contains=ndsLocationFile,ndsLocationLine,ndsLocationFunction,ndsLocationThread1,ndsLocationThread2,ndsLocationProcess,ndsLocationInstanceGW,ndsLocationInstanceCL
+syntax match ndsLocationThread2 /T: \?\(0x\)\?[a-zA-Z_0-9. ]\+/ skipwhite contained contains=ndsLocationFile,ndsLocationLine,ndsLocationFunction,ndsLocationThread1,ndsLocationThread2,ndsLocationProcess,ndsLocationInstanceGW,ndsLocationInstanceCL
+syntax match ndsLocationProcess /p: \?\(0x\)\?[0-9a-fA-F ]\+/ skipwhite contained contains=ndsLocationFile,ndsLocationLine,ndsLocationFunction,ndsLocationThread1,ndsLocationThread2,ndsLocationProcess,ndsLocationInstanceGW,ndsLocationInstanceCL
+syntax match ndsLocationInstanceGW /i:GW /me=e-1 skipwhite contained contains=ndsLocationFile,ndsLocationLine,ndsLocationFunction,ndsLocationThread1,ndsLocationThread2,ndsLocationProcess,ndsLocationInstanceGW,ndsLocationInstanceCL
+syntax match ndsLocationInstanceCL /i:IPC /me=e-1 skipwhite contained contains=ndsLocationFile,ndsLocationLine,ndsLocationFunction,ndsLocationThread1,ndsLocationThread2,ndsLocationProcess,ndsLocationInstanceGW,ndsLocationInstanceCL
 
 
 "*****************************************************************************
@@ -159,11 +159,11 @@ highlight link ndsLocationProcess Comment
 
 highlight link ndsText String
 
-highlight ndsFatal guibg=Red ctermbg=Red
+highlight ndsFatal guibg=Red guifg=Black ctermbg=Red ctermfg=Black
 highlight ndsError guibg=Red guifg=White ctermbg=Red ctermfg=White
 highlight ndsWarning guibg=LightRed ctermbg=LightRed ctermfg=Black
-highlight ndsCaution guibg=LightRed ctermbg=LightRed ctermfg=Black  
-highlight ndsMilestone guibg=Gray ctermbg=Gray
+"highlight ndsCaution guibg=LightRed ctermbg=LightRed ctermfg=Black  
+highlight ndsMilestone guibg=Gray ctermbg=Gray ctermfg=Black
 
 "set wrap
 "set linebreak
