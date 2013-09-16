@@ -109,3 +109,6 @@
 [submodule "bundle/PIV"]
 	path = bundle/PIV
 	url = git@github.com:spf13/PIV.git
+[submodule "bundle/vim-surround"]
+	path = bundle/vim-surround
+	url = git@github.com:tpope/vim-surround.git
