@@ -106,3 +106,6 @@
 [submodule "bundle/tagbar"]
 	path = bundle/tagbar
 	url = git@github.com:majutsushi/tagbar
+[submodule "bundle/PIV"]
+	path = bundle/PIV
+	url = git@github.com:spf13/PIV.git
