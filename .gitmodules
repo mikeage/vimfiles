@@ -115,3 +115,6 @@
 [submodule "bundle/linediff.vim"]
 	path = bundle/linediff.vim
 	url = git@github.com:AndrewRadev/linediff.vim.git
+[submodule "bundle/vim-bbye"]
+	path = bundle/vim-bbye
+	url = https://github.com/moll/vim-bbye.git
