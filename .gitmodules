@@ -67,9 +67,6 @@
 [submodule "bundle/YankRing.vim"]
 	path = bundle/YankRing.vim
 	url = https://github.com/vim-scripts/YankRing.vim.git
-[submodule "bundle/ShowMarks"]
-	path = bundle/ShowMarks
-	url = git@github.com:mikeage/ShowMarks.git
 [submodule "bundle/A_mikeage"]
 	path = bundle/A_mikeage
 	url = git@github.com:mikeage/vim-mikeage.git
@@ -121,3 +118,6 @@
 [submodule "bundle/vim-gitgutter"]
 	path = bundle/vim-gitgutter
 	url = git@github.com:airblade/vim-gitgutter.git
+[submodule "bundle/vim-signature"]
+	path = bundle/vim-signature
+	url = git@github.com:kshenoy/vim-signature.git
