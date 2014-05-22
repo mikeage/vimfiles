@@ -3,7 +3,7 @@
 	url = https://github.com/tpope/vim-pathogen.git
 [submodule "bundle/ccase.vim"]
 	path = bundle/ccase.vim
-	url = git@github.com:mikeage/ccase.vim.git
+	url = https://github.com/mikeage/ccase.vim.git
 [submodule "bundle/bufexplorer"]
 	path = bundle/bufexplorer
 	url = https://github.com/c9s/bufexplorer.git
@@ -69,7 +69,7 @@
 	url = https://github.com/vim-scripts/YankRing.vim.git
 [submodule "bundle/A_mikeage"]
 	path = bundle/A_mikeage
-	url = git@github.com:mikeage/vim-mikeage.git
+	url = https://github.com/mikeage/vim-mikeage.git
 [submodule "bundle/vim-fugitive"]
 	path = bundle/vim-fugitive
 	url = https://github.com/tpope/vim-fugitive.git
@@ -78,55 +78,55 @@
 	url = https://github.com/jeroenbourgois/vim-actionscript.git
 [submodule "bundle/mediawiki"]
 	path = bundle/mediawiki
-	url = git@github.com:mikeage/mediawiki.vim.git
+	url = https://github.com/mikeage/mediawiki.vim.git
 [submodule "bundle/vdebug"]
 	path = bundle/vdebug
-	url = git@github.com:joonty/vdebug.git
+	url = https://github.com/joonty/vdebug.git
 [submodule "bundle/ultisnips"]
 	path = bundle/ultisnips
-	url = git@github.com:SirVer/ultisnips.git
+	url = https://github.com/SirVer/ultisnips.git
 [submodule "bundle/occur"]
 	path = bundle/occur
-	url = git@github.com:mikeage/occur.vim.git
+	url = https://github.com/mikeage/occur.vim.git
 [submodule "bundle/yankmarks"]
 	path = bundle/yankmarks
-	url = git@github.com:mikeage/vim-yankmarks.git
+	url = https://github.com/mikeage/vim-yankmarks.git
 [submodule "bundle/vim-colors-solarized"]
 	path = bundle/vim-colors-solarized
-	url = git@github.com:altercation/vim-colors-solarized.git
+	url = https://github.com/altercation/vim-colors-solarized.git
 [submodule "bundle/minibufexpl.vim"]
 	path = bundle/minibufexpl.vim
-	url = git@github.com:fholgado/minibufexpl.vim.git
+	url = https://github.com/fholgado/minibufexpl.vim.git
 [submodule "bundle/LogViewer"]
 	path = bundle/LogViewer
-	url = git@github.com:mikeage/LogViewer.git
+	url = https://github.com/mikeage/LogViewer.git
 [submodule "bundle/tagbar"]
 	path = bundle/tagbar
-	url = git@github.com:majutsushi/tagbar
+	url = https://github.com/majutsushi/tagbar
 [submodule "bundle/PIV"]
 	path = bundle/PIV
-	url = git@github.com:spf13/PIV.git
+	url = https://github.com/spf13/PIV.git
 [submodule "bundle/vim-surround"]
 	path = bundle/vim-surround
-	url = git@github.com:tpope/vim-surround.git
+	url = https://github.com/tpope/vim-surround.git
 [submodule "bundle/linediff.vim"]
 	path = bundle/linediff.vim
-	url = git@github.com:AndrewRadev/linediff.vim.git
+	url = https://github.com/AndrewRadev/linediff.vim.git
 [submodule "bundle/vim-bbye"]
 	path = bundle/vim-bbye
 	url = https://github.com/moll/vim-bbye.git
 [submodule "bundle/vim-gitgutter"]
 	path = bundle/vim-gitgutter
-	url = git@github.com:airblade/vim-gitgutter.git
+	url = https://github.com/airblade/vim-gitgutter.git
 [submodule "bundle/vim-signature"]
 	path = bundle/vim-signature
-	url = git@github.com:kshenoy/vim-signature.git
+	url = https://github.com/kshenoy/vim-signature.git
 [submodule "bundle/vim-javascript-syntax"]
 	path = bundle/vim-javascript-syntax
-	url = git@github.com:jelera/vim-javascript-syntax.git
+	url = https://github.com/jelera/vim-javascript-syntax.git
 [submodule "bundle/vim-javascript"]
 	path = bundle/vim-javascript
-	url = git@github.com:pangloss/vim-javascript.git
+	url = https://github.com/pangloss/vim-javascript.git
 [submodule "bundle/vim-indent-guides"]
 	path = bundle/vim-indent-guides
-	url = git@github.com:nathanaelkane/vim-indent-guides.git
+	url = https://github.com/nathanaelkane/vim-indent-guides.git
