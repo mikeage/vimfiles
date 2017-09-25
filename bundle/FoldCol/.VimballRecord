@@ -1,1 +1,2 @@
 foldcol.vba: call delete('/disks/uilstore6/disk602/mmiller/.vim/bundle/FoldCol//plugin/foldcol.vim')|call delete('/disks/uilstore6/disk602/mmiller/.vim/bundle/FoldCol//doc/foldcol.txt')
+foldcol.vba: call delete('/Users/mikemi/.vim/bundle/FoldCol//plugin/foldcol.vim')|call delete('/Users/mikemi/.vim/bundle/FoldCol//doc/foldcol.txt')

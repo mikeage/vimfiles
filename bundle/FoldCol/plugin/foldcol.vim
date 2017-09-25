@@ -1,7 +1,7 @@
 " foldcol: Fold Column function
-" Author:	Charles E. Campbell, Jr.
-" Date:		Aug 17, 2010
-" Version:	3f	ASTRO-ONLY
+" Author:	Charles E. Campbell
+" Date:		Nov 17, 2013
+" Version:	3g	ASTRO-ONLY
 " Usage:
 " 	Using visual-block mode, select a block (use ctrl-v).  Press \vfc
 " 	This operation will fold the selected block away.
@@ -22,7 +22,7 @@
 if &cp || exists("g:loaded_foldcol") || !has("conceal")
  finish
 endif
-let g:loaded_foldcol= "v3f"
+let g:loaded_foldcol= "v3g"
 
 " ---------------------------------------------------------------------
 " Public Interface: {{{1
@@ -58,6 +58,14 @@ fun! s:FoldCol(dofold)
    " lower right corner
    let line_lr = line("'>")
    let col_lr  = virtcol("'>")
+   if &selection ==# 'exclusive'
+	" need to subtract the display width of the character at the end of the selection
+	if exists('*strdisplaywidth')
+		let col_lr -= strdisplaywidth(matchstr(getline(line_lr), '\%' . col("'>") . 'c.'), strdisplaywidth(strpart(getline(line_lr), 0, col("'>") - 1)))
+	else
+		let col_lr -= 1
+	endif
+   endif
   
 "   call Decho('syn region FoldCol start="\%>'.line_ul.'l\%>'.col_ul.'v" end="\%>'.line_lr.'l\|\%>'.col_lr.'v" conceal')
    exe 'syn region FoldCol start="\%>'.line_ul.'l\%>'.col_ul.'v" end="\%>'.line_lr.'l\|\%>'.col_lr.'v" conceal containedin=ALL'
