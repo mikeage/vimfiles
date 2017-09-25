@@ -93,7 +93,7 @@
 	url = https://github.com/altercation/vim-colors-solarized.git
 [submodule "bundle/minibufexpl.vim"]
 	path = bundle/minibufexpl.vim
-	url = https://github.com/fholgado/minibufexpl.vim.git
+	url = https://github.com/weynhamz/vim-plugin-minibufexpl.git
 [submodule "bundle/LogViewer"]
 	path = bundle/LogViewer
 	url = https://github.com/mikeage/LogViewer.git
