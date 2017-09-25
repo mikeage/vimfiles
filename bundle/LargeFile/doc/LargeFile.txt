@@ -1,8 +1,8 @@
-*LargeFile.txt*	Editing Large Files Quickly			Feb 01, 2011
+*LargeFile.txt*	Editing Large Files Quickly			Jan 08, 2015
 
-Author:  Charles E. Campbell, Jr.  <NdrOchip@ScampbellPfamily.AbizM>
+Author:  Charles E. Campbell  <NdrOchip@ScampbellPfamily.AbizM>
 	  (remove NOSPAM from Campbell's email first)
-Copyright: (c) 2004-2011 by Charles E. Campbell, Jr.	*LargeFile-copyright*
+Copyright: (c) 2004-2015 by Charles E. Campbell	*LargeFile-copyright*
            The VIM LICENSE applies to LargeFile.vim
            (see |copyright|) except use "LargeFile" instead of "Vim"
 	   No warranty, express or implied.  Use At-Your-Own-Risk.
@@ -66,23 +66,32 @@ about loading a large file:
 ==============================================================================
 2. History						*largefile-history* {{{1
 
-  5 : Aug 19, 2009 * Largefile additionally disables folding and parentheses
-		     matching (:Unlarge will restore them)
-		   * complete option set so that buffers from other windows
-		     are not scanned.  Thus an open "Large" file will not
-		     cause completion to run slow in other windows.
-		     Unfortunately I see no way to have just the "Large"
-		     buffers bypassed this way; its either all or none.
-      Jan 20, 2011 * Changed setting retention variables to use a
-		     common "b:LF_" prefix
-  4 : Jan 03, 2008 * made LargeFile.vim :AutoInstall:-able by getscript
-      Apr 11, 2008 * (Daniel Shahaf suggested) that :Large! do the large-file
-		     handling irregardless of file size.  Implemented.
-      Sep 23, 2008 * if getfsize() returns -2 then the file is assumed to be
-		     large
-  3 : May 24, 2007 * Unlarge command included
-		   * If getfsize() returns something less than -1, then it
-		     will automatically be assumed to be a large file.
+  7 :	Oct 30, 2014	* made saving and restoration use local or global
+			  consistently (depends on vim version as to which
+			  is used)
+	Jan 08, 2015	* (Daniel Hahler) provided a patch to fix an error
+			  that showed up while quitting a large buffer
+  5 :	Aug 19, 2009	* Largefile additionally disables folding and parentheses
+			  matching (:Unlarge will restore them)
+			* complete option set so that buffers from other windows
+			  are not scanned.  Thus an open "Large" file will not
+			  cause completion to run slow in other windows.
+			  Unfortunately I see no way to have just the "Large"
+			  buffers bypassed this way; its either all or none.
+	Jan 20, 2011	* Changed setting retention variables to use a
+			  common "b:LF_" prefix
+	Apr 24, 2013	* (Kris Malfettone) suggested that |'bk'| and |'wk'|
+			  options should also be suppressed by LargeFile.
+	Oct 31, 2013	* persistent undo used to localize turning
+			  |'undolevels'| off to LargeFiles
+  4 :	Jan 03, 2008	* made LargeFile.vim :AutoInstall:-able by getscript
+	Apr 11, 2008	* (Daniel Shahaf suggested) that :Large! do the large-file
+			  handling irregardless of file size.  Implemented.
+	Sep 23, 2008	* if getfsize() returns -2 then the file is assumed to be
+			  large
+  3 :	May 24, 2007	* Unlarge command included
+			* If getfsize() returns something less than -1, then it
+			  will automatically be assumed to be a large file.
 
 ==============================================================================
 vim:tw=78:ts=8:ft=help:fdm=marker:
