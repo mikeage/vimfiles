@@ -157,3 +157,6 @@
 [submodule "bundle/arduino-syntax-file"]
 	path = bundle/arduino-syntax-file
 	url = https://github.com/vim-scripts/Arduino-syntax-file.git
+[submodule "bundle/ale-platformio"]
+	path = bundle/ale-platformio
+	url = https://github.com/meck/ale-platformio.git
