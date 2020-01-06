@@ -160,3 +160,6 @@
 [submodule "bundle/ale-platformio"]
 	path = bundle/ale-platformio
 	url = https://github.com/meck/ale-platformio.git
+[submodule "bundle/vim-go"]
+	path = bundle/vim-go
+	url = https://github.com/fatih/vim-go.git
