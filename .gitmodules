@@ -163,3 +163,6 @@
 [submodule "bundle/vim-go"]
 	path = bundle/vim-go
 	url = https://github.com/fatih/vim-go.git
+[submodule "bundle/vim-log-highlighting"]
+	path = bundle/vim-log-highlighting
+	url = https://github.com/mtdl9/vim-log-highlighting
