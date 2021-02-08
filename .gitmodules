@@ -166,3 +166,6 @@
 [submodule "bundle/vim-log-highlighting"]
 	path = bundle/vim-log-highlighting
 	url = https://github.com/mtdl9/vim-log-highlighting
+[submodule "bundle/editorconfig-vim"]
+	path = bundle/editorconfig-vim
+	url = https://github.com/editorconfig/editorconfig-vim.git
