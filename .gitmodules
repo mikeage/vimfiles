@@ -169,3 +169,9 @@
 [submodule "bundle/editorconfig-vim"]
 	path = bundle/editorconfig-vim
 	url = https://github.com/editorconfig/editorconfig-vim.git
+[submodule "bundle/Jenkinsfile-vim-syntax"]
+	path = bundle/Jenkinsfile-vim-syntax
+	url = https://github.com/martinda/Jenkinsfile-vim-syntax.git
+[submodule "bundle/groovyindent-unix"]
+	path = bundle/groovyindent-unix
+	url = https://github.com/vim-scripts/groovyindent-unix
