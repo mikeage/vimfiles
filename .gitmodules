@@ -7,12 +7,6 @@
 [submodule "bundle/ctrlp.vim"]
 	path = bundle/ctrlp.vim
 	url = https://github.com/ctrlpvim/ctrlp.vim.git
-[submodule "bundle/rainbow_parentheses.vim"]
-	path = bundle/rainbow_parentheses.vim
-	url = https://github.com/kien/rainbow_parentheses.vim.git
-[submodule "bundle/vim-easymotion"]
-	path = bundle/vim-easymotion
-	url = https://github.com/Lokaltog/vim-easymotion.git
 [submodule "bundle/vim-addon-mw-utils"]
 	path = bundle/vim-addon-mw-utils
 	url = https://github.com/MarcWeber/vim-addon-mw-utils.git
@@ -25,27 +19,18 @@
 [submodule "bundle/nerdtree"]
 	path = bundle/nerdtree
 	url = https://github.com/scrooloose/nerdtree.git
-[submodule "bundle/gundo.vim"]
-	path = bundle/gundo.vim
-	url = https://github.com/sjl/gundo.vim.git
 [submodule "bundle/tlib_vim"]
 	path = bundle/tlib_vim
 	url = https://github.com/tomtom/tlib_vim.git
 [submodule "bundle/vim-eunuch"]
 	path = bundle/vim-eunuch
 	url = https://github.com/tpope/vim-eunuch.git
-[submodule "bundle/vim-matrix-screensaver"]
-	path = bundle/vim-matrix-screensaver
-	url = https://github.com/uguu-org/vim-matrix-screensaver.git
 [submodule "bundle/autohotkey-ahk"]
 	path = bundle/autohotkey-ahk
 	url = https://github.com/vim-scripts/autohotkey-ahk.git
 [submodule "bundle/CRefVim"]
 	path = bundle/CRefVim
 	url = https://github.com/vim-scripts/CRefVim.git
-[submodule "bundle/cscope_macros.vim"]
-	path = bundle/cscope_macros.vim
-	url = https://github.com/vim-scripts/cscope_macros.vim.git
 [submodule "bundle/DirDiff.vim"]
 	path = bundle/DirDiff.vim
 	url = https://github.com/vim-scripts/DirDiff.vim.git
@@ -73,9 +58,6 @@
 [submodule "bundle/mediawiki"]
 	path = bundle/mediawiki
 	url = https://github.com/mikeage/mediawiki.vim.git
-[submodule "bundle/ultisnips"]
-	path = bundle/ultisnips
-	url = https://github.com/SirVer/ultisnips.git
 [submodule "bundle/occur"]
 	path = bundle/occur
 	url = https://github.com/mikeage/occur.vim.git
@@ -94,9 +76,6 @@
 [submodule "bundle/tagbar"]
 	path = bundle/tagbar
 	url = https://github.com/majutsushi/tagbar
-[submodule "bundle/PIV"]
-	path = bundle/PIV
-	url = https://github.com/spf13/PIV.git
 [submodule "bundle/vim-surround"]
 	path = bundle/vim-surround
 	url = https://github.com/tpope/vim-surround.git
@@ -124,9 +103,6 @@
 [submodule "bundle/dart-vim-plugin"]
 	path = bundle/dart-vim-plugin
 	url = https://github.com/dart-lang/dart-vim-plugin.git
-[submodule "bundle/jedi-vim.git"]
-	path = bundle/jedi-vim.git
-	url = https://github.com/davidhalter/jedi-vim.git
 [submodule "bundle/salt-vim"]
 	path = bundle/salt-vim
 	url = https://github.com/saltstack/salt-vim.git
@@ -178,6 +154,24 @@
 [submodule "bundle/Dockerfile.vim"]
 	path = bundle/Dockerfile.vim
 	url = https://github.com/ekalinin/Dockerfile.vim.git
-[submodule "bundle/omnisharp-vim"]
-	path = bundle/omnisharp-vim
-	url = https://github.com/OmniSharp/omnisharp-vim
+[submodule "bundle/vim-lsp"]
+	path = bundle/vim-lsp
+	url = https://github.com/prabirshrestha/vim-lsp.git
+[submodule "bundle/vim-lsp-settings"]
+	path = bundle/vim-lsp-settings
+	url = https://github.com/mattn/vim-lsp-settings.git
+[submodule "bundle/vim-lsp-ale"]
+	path = bundle/vim-lsp-ale
+	url = https://github.com/rhysd/vim-lsp-ale.git
+[submodule "bundle/asyncomplete.vim"]
+	path = bundle/asyncomplete.vim
+	url = https://github.com/prabirshrestha/asyncomplete.vim.git
+[submodule "bundle/asyncomplete-lsp.vim"]
+	path = bundle/asyncomplete-lsp.vim
+	url = https://github.com/prabirshrestha/asyncomplete-lsp.vim.git
+[submodule "bundle/git-messenger.vim"]
+	path = bundle/git-messenger.vim
+	url = https://github.com/rhysd/git-messenger.vim.git
+[submodule "bundle/vim-jinja2-syntax"]
+	path = bundle/vim-jinja2-syntax
+	url = https://github.com/glench/vim-jinja2-syntax
