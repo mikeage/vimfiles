@@ -148,9 +148,6 @@
 [submodule "bundle/Jenkinsfile-vim-syntax"]
 	path = bundle/Jenkinsfile-vim-syntax
 	url = https://github.com/martinda/Jenkinsfile-vim-syntax.git
-[submodule "bundle/groovyindent-unix"]
-	path = bundle/groovyindent-unix
-	url = https://github.com/vim-scripts/groovyindent-unix
 [submodule "bundle/Dockerfile.vim"]
 	path = bundle/Dockerfile.vim
 	url = https://github.com/ekalinin/Dockerfile.vim.git
@@ -175,3 +172,6 @@
 [submodule "bundle/vim-jinja2-syntax"]
 	path = bundle/vim-jinja2-syntax
 	url = https://github.com/glench/vim-jinja2-syntax
+[submodule "bundle/vim-groovy"]
+	path = bundle/vim-groovy
+	url = https://github.com/thecodesmith/vim-groovy.git
