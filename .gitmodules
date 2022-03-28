@@ -175,3 +175,6 @@
 [submodule "bundle/vim-groovy"]
 	path = bundle/vim-groovy
 	url = https://github.com/thecodesmith/vim-groovy.git
+[submodule "bundle/vim-prettier"]
+	path = bundle/vim-prettier
+	url = https://github.com/prettier/vim-prettier
