@@ -64,9 +64,6 @@
 [submodule "bundle/yankmarks"]
 	path = bundle/yankmarks
 	url = https://github.com/mikeage/vim-yankmarks.git
-[submodule "bundle/vim-colors-solarized"]
-	path = bundle/vim-colors-solarized
-	url = https://github.com/altercation/vim-colors-solarized.git
 [submodule "bundle/minibufexpl.vim"]
 	path = bundle/minibufexpl.vim
 	url = https://github.com/weynhamz/vim-plugin-minibufexpl.git
@@ -181,3 +178,6 @@
 [submodule "bundle/vim-terraform"]
 	path = bundle/vim-terraform
 	url = https://github.com/hashivim/vim-terraform.git
+[submodule "bundle/vim-solarized8"]
+	path = bundle/vim-solarized8
+	url = https://github.com/lifepillar/vim-solarized8
