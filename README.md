@@ -1,3 +1,5 @@
+Archives as I've switched from vim to neovim. See my nvim.lua in my "dotfiles" repo for the continuation
+
 vimfiles
 ========
 
